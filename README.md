@@ -16,7 +16,7 @@
 
 # <img src="Resources/GitHub/cone-emoji.png" height=26px> Keeper's Menu  
 
-Keeper's Menu is a **feature-packed** mod menu for Gorilla Tag, built by me, [**iiDk**](https://github.com/iiDk-the-actual). Whether you just want mods, are a developer, or anything inbetween, this menu has you covered. Designed to be **as useful as possible**, it includes a variety of features and options that let you customize your modding experience to your heart’s content.  
+Keeper's Menu is a **feature-packed** mod menu for Gorilla Tag, built by me, [**Keeper**](https://github.com/protogenreal). Whether you just want mods, are a developer, or anything inbetween, this menu has you covered. Designed to be **as useful as possible**, it includes a variety of features and options that let you customize your modding experience to your heart’s content.  
 
 > Why settle for boring when you can have *stupidly* good?  
 
@@ -136,6 +136,7 @@ If you wish to support me, here are some of the ways you can!
 > Menu sends requests to https://lazypy.ro for many TTS voices.<br>
 > Menu connects to wss://iidk.online for friend system and administrative purposes.<br>
 > Donate, search, star, speak symbols by [Icons8](https://icons8.com).
+> This is from the backup of ii's Menu source backup repo on my account.
 
 > Keeper's Menu  README.md<br>
 > A mod menu for Gorilla Tag with over 1000+ mods
