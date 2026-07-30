@@ -64,6 +64,8 @@ using static kMenu.Utilities.RigUtilities;
 using Hashtable = ExitGames.Client.Photon.Hashtable;
 using Object = UnityEngine.Object;
 using Random = UnityEngine.Random;
+using HarmonyLib;
+using HarmonyXInterop;
 
 namespace kMenu.Mods
 {
@@ -4127,11 +4129,19 @@ Piece Name: {gunTarget.name}";
         {
             string fileName = $"{PluginInfo.BaseDirectory}/BuilderTableData.json";
 
-            File.WriteAllText(fileName, ManagerRegistry.BuilderTable.WriteTableToJson());
+            BuilderTable builderTable = ManagerRegistry.BuilderTable;
+
+            MethodInfo method = typeof(BuilderTable).GetMethod("WriteTableToJson", BindingFlags.NonPublic | BindingFlags.Instance);
+
+
+            File.WriteAllText(fileName, method.Invoke(builderTable, null));
+
+            // this is my first menu 😅 i never fucking used harmony before i admit it 😔
 
             string filePath = FileUtilities.GetGamePath() + "/" + fileName;
             Process.Start(filePath);
         }
+        // i have 0 clue how to use harmony 😭
 
         public static void LoadBuilderTableData()
         {
@@ -5798,8 +5808,12 @@ Piece Name: {gunTarget.name}";
 
         public static void PopAllBalloons()
         {
-            foreach (BalloonHoldable balloon in GetAllType<BalloonHoldable>())
-                balloon.OwnerPopBalloon();
+    foreach (BalloonHoldable balloon in GetAllType<BalloonHoldable>())
+    {
+        MethodInfo method = typeof(BalloonHoldable).GetMethod("OwnerPopBalloon", 
+            BindingFlags.NonPublic | BindingFlags.Instance);
+        method.Invoke(balloon, null);
+    }
         }
 
         public static void GrabBalloons()

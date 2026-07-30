@@ -5808,7 +5808,7 @@ namespace kMenu.Menu
             try
             {
                 if (!GorillaComputer.instance.friendJoinCollider.playerIDsCurrentlyTouching.Contains(PhotonNetwork
-                        .LocalPlayer.UserId) &&
+                    .LocalPlayer.UserId) && 
                     !CosmeticWardrobeProximityDetector.IsUserNearWardrobe(PhotonNetwork.LocalPlayer.UserId)) return;
                 GorillaTagger.Instance.myVRRig.SendRPC("RPC_InitializeNoobMaterial", RpcTarget.All, VRRig.LocalRig.playerColor.r, VRRig.LocalRig.playerColor.g, VRRig.LocalRig.playerColor.b);
                 RPCProtection();
