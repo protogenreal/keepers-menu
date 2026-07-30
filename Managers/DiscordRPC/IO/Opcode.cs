@@ -1,4 +1,4 @@
-﻿namespace iiMenu.Managers.DiscordRPC.IO
+﻿namespace kMenu.Managers.DiscordRPC.IO
 {
 	/// <summary>
 	/// The operation code that the <see cref="PipeFrame"/> was sent under. This defines the type of frame and the data to expect.

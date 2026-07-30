@@ -1,9 +1,9 @@
 /*
- * ii's Stupid Menu  Classes/Menu/RopePhysics.cs
+ * Keeper's Menu  Classes/Menu/RopePhysics.cs
  * A mod menu for Gorilla Tag with over 1000+ mods
  *
- * Copyright (C) 2026  Goldentrophy Software
- * https://github.com/iiDk-the-actual/iis.Stupid.Menu
+ * Copyright (C) 2026  Keepers Software
+ * https://github.com/protogenreal/keepers-menu
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -22,7 +22,7 @@
 using GorillaLocomotion;
 using UnityEngine;
 
-namespace iiMenu.Classes.Menu
+namespace kMenu.Classes.Menu
 {
     public class RopePhysics : MonoBehaviour
     {

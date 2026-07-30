@@ -1,9 +1,9 @@
 /*
- * ii's Stupid Menu  Patches/Menu/LoadModPatch.cs
+ * Keeper's Menu  Patches/Menu/LoadModPatch.cs
  * A mod menu for Gorilla Tag with over 1000+ mods
  *
- * Copyright (C) 2026  Goldentrophy Software
- * https://github.com/iiDk-the-actual/iis.Stupid.Menu
+ * Copyright (C) 2026  Keepers Software
+ * https://github.com/protogenreal/keepers-menu
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -21,10 +21,10 @@
 
 ﻿using GorillaTagScripts.VirtualStumpCustomMaps;
 using HarmonyLib;
-using iiMenu.Mods.CustomMaps;
+using kMenu.Mods.CustomMaps;
 using Modio.Mods;
 
-namespace iiMenu.Patches.Menu
+namespace kMenu.Patches.Menu
 {
     [HarmonyPatch(typeof(CustomMapManager), nameof(CustomMapManager.LoadMap))]
     public class LoadModPatch

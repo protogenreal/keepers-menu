@@ -21,18 +21,18 @@
 
 using BepInEx;
 using BepInEx.Logging;
-using iiMenu.Classes.Menu;
-using iiMenu.Managers;
-using iiMenu.Menu;
-using iiMenu.Patches;
-using iiMenu.Patches.Menu;
+using kMenu.Classes.Menu;
+using kMenu.Managers;
+using kMenu.Menu;
+using kMenu.Patches;
+using kMenu.Patches.Menu;
 using System.ComponentModel;
 using System.IO;
 using System.Linq;
 using UnityEngine;
 using Console = System.Console;
 
-namespace iiMenu
+namespace kMenu
 {
     [Description(PluginInfo.Description)]
     [BepInPlugin(PluginInfo.GUID, PluginInfo.Name, PluginInfo.Version)]
@@ -54,7 +54,7 @@ namespace iiMenu
 
             LogManager.Log($@"
 {logoLines}
-    ii's Stupid Menu  {(PluginInfo.BetaBuild ? "Beta " : "Build")} {PluginInfo.Version}
+    Keeper's Stupid Menu  {(PluginInfo.BetaBuild ? "Beta " : "Build")} {PluginInfo.Version}
     Compiled {PluginInfo.BuildTimestamp}
     
     This program comes with ABSOLUTELY NO WARRANTY;

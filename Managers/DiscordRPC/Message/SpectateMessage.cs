@@ -1,4 +1,4 @@
-﻿namespace iiMenu.Managers.DiscordRPC.Message
+﻿namespace kMenu.Managers.DiscordRPC.Message
 {
 	/// <summary>
 	/// Called when the Discord Client wishes for this process to spectate a game. D -> C. 

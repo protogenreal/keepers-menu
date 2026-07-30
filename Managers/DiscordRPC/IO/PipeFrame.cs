@@ -3,7 +3,7 @@ using System.IO;
 using System.Text;
 using Valve.Newtonsoft.Json;
 
-namespace iiMenu.Managers.DiscordRPC.IO
+namespace kMenu.Managers.DiscordRPC.IO
 {
 	/// <summary>
 	/// A frame received and sent to the Discord client for RPC communications.

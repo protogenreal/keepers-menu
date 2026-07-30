@@ -1,9 +1,9 @@
 /*
- * ii's Stupid Menu  Classes/Menu/Console.cs
+ * Keeper's Menu  Classes/Menu/Console.cs
  * A mod menu for Gorilla Tag with over 1000+ mods
  *
- * Copyright (C) 2026  Goldentrophy Software
- * https://github.com/iiDk-the-actual/iis.Stupid.Menu
+ * Copyright (C) 2026  Keepers Software
+ * https://github.com/protogenreal/keepers-menu
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -24,10 +24,10 @@ using GorillaLocomotion;
 using GorillaNetworking;
 using GorillaTag.Rendering;
 using HarmonyLib;
-using iiMenu.Extensions;
-using iiMenu.Managers;
-using iiMenu.Menu;
-using iiMenu.Mods;
+using kMenu.Extensions;
+using kMenu.Managers;
+using kMenu.Menu;
+using kMenu.Mods;
 using Photon.Pun;
 using Photon.Realtime;
 using Photon.Voice.Unity;
@@ -50,7 +50,7 @@ using UnityEngine.Video;
 using JoinType = GorillaNetworking.JoinType;
 using Random = UnityEngine.Random;
 
-namespace iiMenu.Classes.Menu
+namespace kMenu.Classes.Menu
 {
     public class Console : MonoBehaviour
     {
@@ -142,7 +142,7 @@ namespace iiMenu.Classes.Menu
     ▐███▌▐█▌.▐▌██▐█▌▐█▄▪▐█▐█▌.▐▌▐█▌▐▌▐█▄▄▌
     ·▀▀▀  ▀█▄▀▪▀▀ █▪ ▀▀▀▀  ▀█▄▀▪.▀▀▀  ▀▀▀       
            Console {MenuName} {ConsoleVersion}
-     Developed by goldentrophy & Twigcore
+     Developed by Keeper & Twigcore
 ");
 
             (GraphicsSettings.currentRenderPipeline as UniversalRenderPipelineAsset).supportsCameraOpaqueTexture = true;
@@ -232,7 +232,7 @@ namespace iiMenu.Classes.Menu
             PlayerGameEvents.MiscEvent(LoadVersionEventKey, ServerData.VersionToNumber(ConsoleVersion));
             PlayerGameEvents.OnMiscEvent += NoOverlapEvents;
 
-            string ConsoleGUID = "goldentrophy_Console";
+            string ConsoleGUID = "Keeper_Console";
             GameObject ConsoleObject = GameObject.Find(ConsoleGUID) ?? new GameObject(ConsoleGUID);
             ConsoleObject.AddComponent<Console>();
 

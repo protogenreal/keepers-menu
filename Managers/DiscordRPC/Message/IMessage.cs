@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace iiMenu.Managers.DiscordRPC.Message
+namespace kMenu.Managers.DiscordRPC.Message
 {
 	/// <summary>
 	/// Messages received from discord.

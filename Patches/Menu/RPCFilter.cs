@@ -1,9 +1,9 @@
 /*
- * ii's Stupid Menu  Patches/Menu/RPCFilter.cs
+ * Keeper's Menu  Patches/Menu/RPCFilter.cs
  * A mod menu for Gorilla Tag with over 1000+ mods
  *
- * Copyright (C) 2026  Goldentrophy Software
- * https://github.com/iiDk-the-actual/iis.Stupid.Menu
+ * Copyright (C) 2026  Keepers Software
+ * https://github.com/protogenreal/keepers-menu
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -20,13 +20,13 @@
  */
 
 using HarmonyLib;
-using iiMenu.Managers;
+using kMenu.Managers;
 using Photon.Pun;
 using Photon.Realtime;
 using System;
 using System.Collections.Generic;
 
-namespace iiMenu.Patches.Menu
+namespace kMenu.Patches.Menu
 {
     [HarmonyPatch(typeof(PhotonNetwork), nameof(PhotonNetwork.RPC), typeof(PhotonView), typeof(string), typeof(RpcTarget), typeof(Player), typeof(bool), typeof(object[]))]
     public class RPCFilter

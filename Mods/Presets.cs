@@ -1,9 +1,9 @@
 /*
- * ii's Stupid Menu  Mods/Presets.cs
+ * Keeper Menu  Mods/Presets.cs
  * A mod menu for Gorilla Tag with over 1000+ mods
  *
- * Copyright (C) 2026  Goldentrophy Software
- * https://github.com/iiDk-the-actual/iis.Stupid.Menu
+ * Copyright (C) 2026  Keepers Software
+ * https://github.com/protogenreal/keepers-menu
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -19,11 +19,11 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-using iiMenu.Managers;
+using kMenu.Managers;
 using System.IO;
-using static iiMenu.Menu.Main;
+using static kMenu.Menu.Main;
 
-namespace iiMenu.Mods
+namespace kMenu.Mods
 {
     public static class Presets
     {
@@ -100,45 +100,45 @@ namespace iiMenu.Mods
             }
         }
 
-        public static void GoldentrophyPreset()
-        {
-            string[] presetMods = {
-                "Inner Outline Menu",
-                "Outline Menu",
-                "Freeze Player in Menu",
-                "Clear Notifications on Disconnect",
-                "Disable Enabled GUI",
-                "Legacy Ghostview",
-                "Rainbow Projectiles",
-                "Force Enable Hands",
-                "Anti AFK",
-                "Physical Quit Box",
-                "Tag Lag Detector",
-                "Day Time",
-                "Clear Weather",
-                "Info Watch",
-                "Fix Rig Colors",
-                "Cosmetic ESP",
-                "Infection Tracers",
-                "Infection Distance ESP",
-                "Auto Party Kick",
-                "Obnoxious Tag"
-            };
+        //public static void KeeperPreset()
+        //{
+        //    string[] presetMods = {
+        //        "Inner Outline Menu",
+        //        "Outline Menu",
+        //        "Freeze Player in Menu",
+        //        "Clear Notifications on Disconnect",
+        //        "Disable Enabled GUI",
+        //        "Legacy Ghostview",
+        //        "Rainbow Projectiles",
+        //        "Force Enable Hands",
+        //        "Anti AFK",
+        //        "Physical Quit Box",
+        //        "Tag Lag Detector",
+        //        "Day Time",
+        //        "Clear Weather",
+        //        "Info Watch",
+        //        "Fix Rig Colors",
+        //        "Cosmetic ESP",
+        //        "Infection Tracers",
+        //        "Infection Distance ESP",
+        //        "Auto Party Kick",
+        //        "Obnoxious Tag"
+        //    };
 
-            themeType = 33;
-            pageButtonType = 1;
-            fontCycle = -1;
+        //    themeType = 33;
+        //    pageButtonType = 1;
+        //    fontCycle = -1;
 
-            Settings.ChangeMenuTheme();
-            Settings.ChangePageType();
-            Settings.ChangeFontType();
+        //    Settings.ChangeMenuTheme();
+        //    Settings.ChangePageType();
+        //    Settings.ChangeFontType();
 
-            Settings.Panic();
-            foreach (string mod in presetMods)
-                Toggle(mod);
+        //    Settings.Panic();
+        //    foreach (string mod in presetMods)
+        //        Toggle(mod);
             
-            NotificationManager.SendNotification("<color=grey>[</color><color=purple>PRESET</color><color=grey>]</color> Goldentrophy preset enabled successfully.");
-        }
+        //    NotificationManager.SendNotification("<color=grey>[</color><color=purple>PRESET</color><color=grey>]</color> Keeper preset enabled successfully.");
+        //}
 
         public static void PerformancePreset()
         {

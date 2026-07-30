@@ -1,9 +1,9 @@
 ﻿/*
- * ii's Stupid Menu  Patches/Menu/TagPatch.cs
+ * Keeper's Menu  Patches/Menu/TagPatch.cs
  * A mod menu for Gorilla Tag with over 1000+ mods
  *
- * Copyright (C) 2026  Goldentrophy Software
- * https://github.com/iiDk-the-actual/iis.Stupid.Menu
+ * Copyright (C) 2026  Keepers Software
+ * https://github.com/protogenreal/keepers-menu
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -21,16 +21,16 @@
 
 using GorillaGameModes;
 using HarmonyLib;
-using iiMenu.Extensions;
-using iiMenu.Menu;
+using kMenu.Extensions;
+using kMenu.Menu;
 using Photon.Pun;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
-using static iiMenu.Utilities.AssetUtilities;
-using static iiMenu.Utilities.GameModeUtilities;
+using static kMenu.Utilities.AssetUtilities;
+using static kMenu.Utilities.GameModeUtilities;
 
-namespace iiMenu.Patches.Menu
+namespace kMenu.Patches.Menu
 {
     [HarmonyPatch(typeof(GameMode), nameof(GameMode.ReportTag))]
     public class TagPatch

@@ -1,9 +1,9 @@
 ﻿/*
- * ii's Stupid Menu  Extensions/TextMeshProExtensions.cs
+ * Keeper's Menu  Extensions/TextMeshProExtensions.cs
  * A mod menu for Gorilla Tag with over 1000+ mods
  *
- * Copyright (C) 2025  Goldentrophy Software
- * https://github.com/iiDk-the-actual/iis.Stupid.Menu
+ * Copyright (C) 2025  Keeper Software
+ * https://github.com/protogenreal/keepers-menu
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -19,12 +19,12 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-using iiMenu.Utilities;
+using kMenu.Utilities;
 using System;
 using TMPro;
 using UnityEngine;
 
-namespace iiMenu.Extensions
+namespace kMenu.Extensions
 {
     public static class TextMeshProExtensions
     {

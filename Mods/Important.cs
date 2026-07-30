@@ -1,9 +1,9 @@
 /*
- * ii's Stupid Menu  Mods/Important.cs
+ * Keeper Menu  Mods/Important.cs
  * A mod menu for Gorilla Tag with over 1000+ mods
  *
- * Copyright (C) 2026  Goldentrophy Software
- * https://github.com/iiDk-the-actual/iis.Stupid.Menu
+ * Copyright (C) 2026  Keepers Software
+ * https://github.com/protogenreal/keepers-menu
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -25,11 +25,11 @@ using GorillaGameModes;
 using GorillaNetworking;
 using GorillaTagScripts;
 using HarmonyLib;
-using iiMenu.Extensions;
-using iiMenu.Managers;
-using iiMenu.Managers.DiscordRPC;
-using iiMenu.Patches.Menu;
-using iiMenu.Utilities;
+using kMenu.Extensions;
+using kMenu.Managers;
+using kMenu.Managers.DiscordRPC;
+using kMenu.Patches.Menu;
+using kMenu.Utilities;
 using Photon.Pun;
 using System;
 using System.Collections;
@@ -50,13 +50,13 @@ using UnityEngine.TextCore;
 using UnityEngine.XR;
 using UnityEngine.XR.Interaction.Toolkit;
 using Valve.Newtonsoft.Json;
-using static iiMenu.Menu.Main;
-using static iiMenu.Utilities.AssetUtilities;
-using static iiMenu.Utilities.RandomUtilities;
+using static kMenu.Menu.Main;
+using static kMenu.Utilities.AssetUtilities;
+using static kMenu.Utilities.RandomUtilities;
 using Hashtable = ExitGames.Client.Photon.Hashtable;
 using Object = UnityEngine.Object;
 
-namespace iiMenu.Mods
+namespace kMenu.Mods
 {
     public static class Important
     {
@@ -212,7 +212,7 @@ namespace iiMenu.Mods
                 .Aggregate("", (current, line) => current + (Environment.NewLine + "echo      " + line));
 
             string restartScript = @"@echo off
-title ii's Stupid Menu
+title Keeper's Menu
 color 0E
 
 cls
@@ -290,8 +290,8 @@ exit";
                     State = inRoom ? $"Room: {roomName} ({PhotonNetwork.PlayerList.Length}/{PhotonNetwork.CurrentRoom.MaxPlayers})" : "Not in a room",
                     Assets = new Managers.DiscordRPC.Assets
                     {
-                        LargeImageKey = "cone",
-                        LargeImageText = "ii's Stupid Menu",
+                        LargeImageKey = "bow",
+                        LargeImageText = "Keeper's Menu",
                         SmallImageKey = inRoom ? "online" : "offline",
                         SmallImageText = inRoom ? "Online" : "Offline"
                     },
@@ -309,7 +309,7 @@ exit";
                         new Button
                         {
                             Label = "Download",
-                            Url = "https://github.com/iiDk-the-actual/iis.Stupid.Menu/"
+                            Url = "https://github.com/protogenreal/keepers-menu/"
                         }
                     }
                 });
@@ -332,7 +332,8 @@ exit";
             quickSongExists = File.Exists($"{PluginInfo.BaseDirectory}/QuickSong.exe");
             if (!quickSongExists)
             {
-                Prompt("This mod requires the \"QuickSong\" library. Would you like to automatically download it? (16.3mb)", () =>
+                //Prompt("This mod requires the \"QuickSong\" library. Would you like to automatically download it? (16.3mb)", () =>
+                Prompt("This mod requires the \"QuickSong\" library. Which is no longer a thing. Please cancel.", () =>
                 {
                     using UnityWebRequest request = UnityWebRequest.Get("https://github.com/iiDk-the-actual/QuickSong/releases/latest/download/QuickSong.exe");
                     UnityWebRequestAsyncOperation operation = request.SendWebRequest();
@@ -462,7 +463,7 @@ exit";
                 if (_mediaSpriteSheet == null)
                 {
                     _mediaSpriteSheet = ScriptableObject.CreateInstance<TMP_SpriteAsset>();
-                    _mediaSpriteSheet.name = "iiMenu_SpriteSheet";
+                    _mediaSpriteSheet.name = "kMenu_SpriteSheet";
 
                     var textureList = new List<Texture2D>();
                     var spriteDataList = new List<(string name, int index)>();
@@ -556,7 +557,7 @@ exit";
 
                 if (mediaText == null)
                 {
-                    GameObject textHolder = new GameObject("iiMenu_MediaText");
+                    GameObject textHolder = new GameObject("kMenu_MediaText");
 
                     TextMeshPro text = textHolder.GetOrAddComponent<TextMeshPro>();
                     text.color = Color.white;

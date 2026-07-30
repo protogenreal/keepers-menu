@@ -1,13 +1,13 @@
-﻿using iiMenu.Managers.DiscordRPC.Events;
-using iiMenu.Managers.DiscordRPC.Exceptions;
-using iiMenu.Managers.DiscordRPC.IO;
-using iiMenu.Managers.DiscordRPC.Logging;
-using iiMenu.Managers.DiscordRPC.Message;
-using iiMenu.Managers.DiscordRPC.RPC;
-using iiMenu.Managers.DiscordRPC.RPC.Commands;
+﻿using kMenu.Managers.DiscordRPC.Events;
+using kMenu.Managers.DiscordRPC.Exceptions;
+using kMenu.Managers.DiscordRPC.IO;
+using kMenu.Managers.DiscordRPC.Logging;
+using kMenu.Managers.DiscordRPC.Message;
+using kMenu.Managers.DiscordRPC.RPC;
+using kMenu.Managers.DiscordRPC.RPC.Commands;
 using System;
 
-namespace iiMenu.Managers.DiscordRPC
+namespace kMenu.Managers.DiscordRPC
 {
 
     /// <summary>

@@ -1,7 +1,7 @@
-﻿using iiMenu.Managers.DiscordRPC.Converters;
+﻿using kMenu.Managers.DiscordRPC.Converters;
 using Valve.Newtonsoft.Json;
 
-namespace iiMenu.Managers.DiscordRPC.RPC.Payload
+namespace kMenu.Managers.DiscordRPC.RPC.Payload
 {
     /// <summary>
     /// Base Payload that is received by both client and server

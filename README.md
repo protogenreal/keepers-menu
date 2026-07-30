@@ -109,7 +109,7 @@ Need help or want to collaborate? Here are some of my sources of contact:
 - Telegram: [@crimsoncauldron](https://t.me/crimsoncauldron)
 - Discord: [@crimsoncauldron](https://discord.gg/iidk)
 - YouTube: [@iiDk_](https://www.youtube.com/@iiDk_)
-- Email: [admin@goldentrophy.software](mailto:admin@goldentrophy.software)
+- Email: [admin@Keeper.software](mailto:admin@Keeper.software)
 
 </details>
 
@@ -141,7 +141,7 @@ If you wish to support me, here are some of the ways you can!
 > Keeper's Menu  README.md<br>
 > A mod menu for Gorilla Tag with over 1000+ mods
 >
-> Copyright (C) 2026  Goldentrophy Software
+> Copyright (C) 2026  Keeper Software
 > https://github.com/protogenreal/keepers-menu
 > 
 > This program is free software: you can redistribute it and/or modify

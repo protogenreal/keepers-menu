@@ -1,9 +1,9 @@
 /*
- * ii's Stupid Menu  Mods/Advantages.cs
+ * Keeper Menu  Mods/Advantages.cs
  * A mod menu for Gorilla Tag with over 1000+ mods
  *
- * Copyright (C) 2026  Goldentrophy Software
- * https://github.com/iiDk-the-actual/iis.Stupid.Menu
+ * Copyright (C) 2026  Keepers Software
+ * https://github.com/protogenreal/keepers-menu
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -22,21 +22,21 @@
 using ExitGames.Client.Photon;
 using GorillaGameModes;
 using GorillaLocomotion;
-using iiMenu.Extensions;
-using iiMenu.Managers;
-using iiMenu.Menu;
-using iiMenu.Patches.Menu;
+using kMenu.Extensions;
+using kMenu.Managers;
+using kMenu.Menu;
+using kMenu.Patches.Menu;
 using Photon.Pun;
 using Photon.Realtime;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using static iiMenu.Menu.Main;
-using static iiMenu.Utilities.GameModeUtilities;
-using static iiMenu.Utilities.RandomUtilities;
-using static iiMenu.Utilities.RigUtilities;
+using static kMenu.Menu.Main;
+using static kMenu.Utilities.GameModeUtilities;
+using static kMenu.Utilities.RandomUtilities;
+using static kMenu.Utilities.RigUtilities;
 
-namespace iiMenu.Mods
+namespace kMenu.Mods
 {
     public static class Advantages
     {

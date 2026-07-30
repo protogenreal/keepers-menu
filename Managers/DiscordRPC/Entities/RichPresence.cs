@@ -1,10 +1,10 @@
-using iiMenu.Managers.DiscordRPC.Exceptions;
-using iiMenu.Managers.DiscordRPC.Helper;
+using kMenu.Managers.DiscordRPC.Exceptions;
+using kMenu.Managers.DiscordRPC.Helper;
 using System;
 using System.Text;
 using Valve.Newtonsoft.Json;
 
-namespace iiMenu.Managers.DiscordRPC
+namespace kMenu.Managers.DiscordRPC
 {
     /// <summary>
     /// The base rich presence structure

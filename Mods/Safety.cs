@@ -1,9 +1,9 @@
 /*
- * ii's Stupid Menu  Mods/Safety.cs
+ * Keeper Menu  Mods/Safety.cs
  * A mod menu for Gorilla Tag with over 1000+ mods
  *
- * Copyright (C) 2026  Goldentrophy Software
- * https://github.com/iiDk-the-actual/iis.Stupid.Menu
+ * Copyright (C) 2026  Keepers Software
+ * https://github.com/protogenreal/keepers-menu
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -23,12 +23,12 @@ using ExitGames.Client.Photon;
 using GorillaLocomotion;
 using GorillaNetworking;
 using GorillaTagScripts;
-using iiMenu.Extensions;
-using iiMenu.Managers;
-using iiMenu.Menu;
-using iiMenu.Patches.Menu;
-using iiMenu.Patches.Safety;
-using iiMenu.Utilities;
+using kMenu.Extensions;
+using kMenu.Managers;
+using kMenu.Menu;
+using kMenu.Patches.Menu;
+using kMenu.Patches.Safety;
+using kMenu.Utilities;
 using Photon.Pun;
 using Photon.Realtime;
 using Photon.Voice.Unity;
@@ -37,11 +37,11 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using UnityEngine;
-using static iiMenu.Menu.Main;
-using static iiMenu.Utilities.RigUtilities;
+using static kMenu.Menu.Main;
+using static kMenu.Utilities.RigUtilities;
 using Random = UnityEngine.Random;
 
-namespace iiMenu.Mods
+namespace kMenu.Mods
 {
     public static class Safety
     {
@@ -462,7 +462,7 @@ namespace iiMenu.Mods
                         catch { LogManager.Log("Failed to log player"); }
 
                         text += "\n====================================\n";
-                        text += "Text file generated with ii's Stupid Menu";
+                        text += "Text file generated with Keeper's Menu";
                         string fileName = $"{PluginInfo.BaseDirectory}/" + player.NickName + " - Anti Moderator.txt";
 
                         File.WriteAllText(fileName, text);
@@ -506,7 +506,7 @@ namespace iiMenu.Mods
                         catch { LogManager.Log("Failed to log player"); }
 
                         text += "\n====================================\n";
-                        text += "Text file generated with ii's Stupid Menu";
+                        text += "Text file generated with Keeper's Menu";
                         string fileName = $"{PluginInfo.BaseDirectory}/" + player.NickName + " - Anti Content Creator.txt";
 
                         File.WriteAllText(fileName, text);
@@ -679,7 +679,7 @@ namespace iiMenu.Mods
 
         public static void ChangeIdentityCustom()
         {
-            string[] names = { "goldentrophy", "me" };
+            string[] names = { "Keeper", "me" };
             Color[] colors = { new Color32(255, 128, 0, 255), Color.white };
 
             string fileName = $"{PluginInfo.BaseDirectory}/CustomIdentities.txt";
@@ -689,7 +689,7 @@ namespace iiMenu.Mods
                 names = data[0].Split(";");
                 colors = data[1].Split(";").Select(HexToColor).ToArray();
             } else
-                File.WriteAllText(fileName, "goldentrophy;me\nff8000;ffffff");
+                File.WriteAllText(fileName, "Keeper;me\nff66ff;ffffff");
 
             string name = names[Random.Range(0, names.Length)];
             Color color = colors[Random.Range(0, colors.Length)];

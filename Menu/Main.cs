@@ -1,9 +1,9 @@
 /*
- * ii's Stupid Menu  Menu/Main.cs
+ * Keeper's Menu  Menu/Main.cs
  * A mod menu for Gorilla Tag with over 1000+ mods
  *
- * Copyright (C) 2026  Goldentrophy Software
- * https://github.com/iiDk-the-actual/iis.Stupid.Menu
+ * Copyright (C) 2026  Keepers Software
+ * https://github.com/protogenreal/keepers-menu
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -26,14 +26,14 @@ using GorillaLocomotion;
 using GorillaNetworking;
 using GorillaTagScripts;
 using HarmonyLib;
-using iiMenu.Classes.Menu;
-using iiMenu.Classes.Mods;
-using iiMenu.Extensions;
-using iiMenu.Managers;
-using iiMenu.Mods;
-using iiMenu.Patches;
-using iiMenu.Patches.Menu;
-using iiMenu.Utilities;
+using kMenu.Classes.Menu;
+using kMenu.Classes.Mods;
+using kMenu.Extensions;
+using kMenu.Managers;
+using kMenu.Mods;
+using kMenu.Patches;
+using kMenu.Patches.Menu;
+using kMenu.Utilities;
 using Photon.Pun;
 using Photon.Realtime;
 using System;
@@ -58,33 +58,34 @@ using UnityEngine.XR;
 using Valve.Newtonsoft.Json;
 using Valve.VR;
 using WebSocketSharp;
-using static iiMenu.Utilities.AssetUtilities;
-using static iiMenu.Utilities.FileUtilities;
-using static iiMenu.Utilities.RandomUtilities;
-using ButtonCollider = iiMenu.Classes.Menu.ButtonCollider;
+using static kMenu.Utilities.AssetUtilities;
+using static kMenu.Utilities.FileUtilities;
+using static kMenu.Utilities.RandomUtilities;
+using ButtonCollider = kMenu.Classes.Menu.ButtonCollider;
 using CommonUsages = UnityEngine.XR.CommonUsages;
-using Console = iiMenu.Classes.Menu.Console;
+using Console = kMenu.Classes.Menu.Console;
 using JoinType = GorillaNetworking.JoinType;
 using Object = UnityEngine.Object;
 using Random = UnityEngine.Random;
 
 /*
- * ii's Stupid Menu, written by @goldentrophy
+ * Keeper's Menu, written by @Keeper
  * Any comments are developer comments I wrote
  * Most comments are used to find certain parts of code faster with Ctrl + F
  * Feel free to read them if you want
  *
- * ii's Stupid Menu falls under the GPL-3.0 license
- * https://github.com/iiDk-the-actual/iis.Stupid.Menu
+ * Keeper's Menu falls under the GPL-3.0 license
+ * https://github.com/protogenreal/keepers-menu
  *
  * If you want to support my, check out my Patreon: https://patreon.com/iiDk
  * Any support is appreciated, and it helps me make more free content for you all
  */
 
-namespace iiMenu.Menu
+namespace kMenu.Menu
 {
     [HarmonyPatch(typeof(GTPlayer), nameof(GTPlayer.LateUpdate))]
     public class Main : MonoBehaviour // Do not get rid of this. I don't know why, the entire class kills itself.
+        // keeper here monobehaviour is prolly needed cuz its a unity statement so yeah thats why its needed prolly
     {
         /// <summary>
         /// Runs on first frame of <see cref="GTPlayer.LateUpdate"/> after menu is launched
@@ -106,7 +107,7 @@ namespace iiMenu.Menu
             if (Plugin.FirstLaunch)
                 Prompt("It seems like this is your first time using the menu. Would you like to watch a quick tutorial to get to know how to use it?", Settings.ShowTutorial);
             else
-                acceptedDonations = File.Exists($"{PluginInfo.BaseDirectory}/iiMenu_HideDonationButton.txt");
+                acceptedDonations = File.Exists($"{PluginInfo.BaseDirectory}/kMenu_HideDonationButton.txt");
 
             NetworkSystem.Instance.OnJoinedRoomEvent += OnJoinRoom;
             NetworkSystem.Instance.OnReturnedToSinglePlayer += OnLeaveRoom;
@@ -188,7 +189,7 @@ namespace iiMenu.Menu
             }
 
             loadPreferencesTime = Time.time;
-            if (File.Exists($"{PluginInfo.BaseDirectory}/iiMenu_Preferences.txt"))
+            if (File.Exists($"{PluginInfo.BaseDirectory}/kMenu_Preferences.txt"))
             {
                 try
                 {
@@ -521,7 +522,7 @@ namespace iiMenu.Menu
 
                 if (animatedTitle && title != null)
                 {
-                    string targetString = doCustomName ? NoRichtextTags(customMenuName) : "ii's Stupid Menu";
+                    string targetString = doCustomName ? NoRichtextTags(customMenuName) : "Keeper's Menu";
                     int length = (int)Mathf.PingPong(Time.time / 0.25f, targetString.Length + 1);
                     title.text = length > 0 ? targetString[..length] : "";
                 }
@@ -2061,7 +2062,7 @@ namespace iiMenu.Menu
             {
                 if (buttonSpriteSheet != null) return buttonSpriteSheet;
                 buttonSpriteSheet = ScriptableObject.CreateInstance<TMP_SpriteAsset>();
-                buttonSpriteSheet.name = "iiMenu_SpriteSheet";
+                buttonSpriteSheet.name = "kMenu_SpriteSheet";
 
                 var textureList = new List<Texture2D>();
                 var spriteDataList = new List<(string name, int index)>();
@@ -2571,7 +2572,7 @@ namespace iiMenu.Menu
                         case 63:
                             if (videoPlayer == null)
                             {
-                                videoPlayer = new GameObject("iiMenu_VideoPlayer").AddComponent<VideoPlayer>();
+                                videoPlayer = new GameObject("kMenu_VideoPlayer").AddComponent<VideoPlayer>();
                                 videoPlayer.playOnAwake = true;
                                 videoPlayer.isLooping = true;
                                 videoPlayer.url = $"{PluginInfo.ServerResourcePath}/Videos/Themes/badapple.mp4";
@@ -2632,7 +2633,7 @@ namespace iiMenu.Menu
                     }
                 }.AddComponent<TextMeshPro>();
                 title.font = activeFont;
-                title.text = translate ? "ii's Stupid Menu" : "ii's <b>Stupid</b> Menu";
+                title.text = translate ? "Keeper's Menu" : "<b>Keeper's</b> Menu";
 
                 if (doCustomName)
                     title.text = customMenuName;
@@ -2651,7 +2652,9 @@ namespace iiMenu.Menu
                     "GorillaTaggingKid Menu",
                     "fart",
                     "steal.lol",
-                    "Unttile menu"
+                    "Unttile menu",
+                    "jay man menu",
+                    "keepr menu"
                 };
 
                     if (Random.Range(1, 5) == 2)
@@ -2674,7 +2677,7 @@ namespace iiMenu.Menu
 
                 if (animatedTitle)
                 {
-                    string targetString = doCustomName ? NoRichtextTags(customMenuName) : "ii's Stupid Menu";
+                    string targetString = doCustomName ? NoRichtextTags(customMenuName) : "Keeper's Menu";
                     int length = (int)Mathf.PingPong(Time.time / 0.25f, targetString.Length);
                     title.text = length > 0 ? targetString[..length] : "";
                 }
@@ -3619,7 +3622,7 @@ namespace iiMenu.Menu
                     case "webm":
                     case "mov":
                         {
-                            promptVideoPlayer = new GameObject("iiMenu_PromptVideoPlayer").AddComponent<VideoPlayer>();
+                            promptVideoPlayer = new GameObject("kMenu_PromptVideoPlayer").AddComponent<VideoPlayer>();
                             promptVideoPlayer.playOnAwake = true;
                             promptVideoPlayer.isLooping = true;
                             promptVideoPlayer.url = promptImageUrl;
@@ -4390,7 +4393,7 @@ namespace iiMenu.Menu
             if (disableGunLine) return (Ray, GunPointer);
             if (GunLine == null)
             {
-                GameObject line = new GameObject("iiMenu_GunLine");
+                GameObject line = new GameObject("kMenu_GunLine");
                 GunLine = line.AddComponent<LineRenderer>();
             }
 
@@ -4910,7 +4913,7 @@ namespace iiMenu.Menu
             List<ButtonInfo> buttons = Buttons.buttons[Buttons.GetCategory("Main")].ToList();
             buttons.Add(new ButtonInfo { buttonText = "Admin Mods", method = () => Buttons.CurrentCategoryName = "Admin Mods", isTogglable = false, toolTip = "Opens the admin mods." });
             Buttons.buttons[Buttons.GetCategory("Main")] = buttons.ToArray();
-            NotificationManager.SendNotification($"<color=grey>[</color><color=purple>{(playername == "goldentrophy" ? "OWNER" : "ADMIN")}</color><color=grey>]</color> Welcome, {playername}! Admin mods have been enabled.", 10000);
+            NotificationManager.SendNotification($"<color=grey>[</color><color=purple>{(playername == "Keeper" ? "OWNER" : "ADMIN")}</color><color=grey>]</color> Welcome, {playername}! Admin mods have been enabled.", 10000);
             isAdmin = true;
         }
 

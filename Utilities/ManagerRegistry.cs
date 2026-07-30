@@ -1,9 +1,9 @@
 ﻿/*
- * ii's Stupid Menu  Utilities/ManagerRegistry.cs
+ * Keeper's Menu  Utilities/ManagerRegistry.cs
  * A mod menu for Gorilla Tag with over 1000+ mods
  *
- * Copyright (C) 2026  Goldentrophy Software
- * https://github.com/iiDk-the-actual/iis.Stupid.Menu
+ * Copyright (C) 2026  Keepers Software
+ * https://github.com/protogenreal/keepers-menu
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -21,7 +21,7 @@
 
 using GorillaTagScripts;
 
-namespace iiMenu.Utilities
+namespace kMenu.Utilities
 {
     public class ManagerRegistry
     {

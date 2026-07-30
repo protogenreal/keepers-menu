@@ -1,9 +1,9 @@
 ﻿/*
- * ii's Stupid Menu  Mods/Visuals.cs
+ * Keeper Menu  Mods/Visuals.cs
  * A mod menu for Gorilla Tag with over 1000+ mods
  *
- * Copyright (C) 2026  Goldentrophy Software
- * https://github.com/iiDk-the-actual/iis.Stupid.Menu
+ * Copyright (C) 2026  Keepers Software
+ * https://github.com/protogenreal/keepers-menu
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -28,13 +28,13 @@ using GorillaNetworking;
 using GorillaTag.Rendering;
 using GorillaTagScripts;
 using HarmonyLib;
-using iiMenu.Classes.Menu;
-using iiMenu.Classes.Mods;
-using iiMenu.Extensions;
-using iiMenu.Managers;
-using iiMenu.Menu;
-using iiMenu.Patches.Menu;
-using iiMenu.Utilities;
+using kMenu.Classes.Menu;
+using kMenu.Classes.Mods;
+using kMenu.Extensions;
+using kMenu.Managers;
+using kMenu.Menu;
+using kMenu.Patches.Menu;
+using kMenu.Utilities;
 using Photon.Pun;
 using System;
 using System.Collections;
@@ -48,13 +48,13 @@ using UnityEngine.Rendering;
 using UnityEngine.TextCore;
 using UnityEngine.UI;
 using WebSocketSharp;
-using static iiMenu.Menu.Main;
-using static iiMenu.Utilities.AssetUtilities;
-using static iiMenu.Utilities.GameModeUtilities;
-using static iiMenu.Utilities.RigUtilities;
+using static kMenu.Menu.Main;
+using static kMenu.Utilities.AssetUtilities;
+using static kMenu.Utilities.GameModeUtilities;
+using static kMenu.Utilities.RigUtilities;
 using Object = UnityEngine.Object;
 
-namespace iiMenu.Mods
+namespace kMenu.Mods
 {
     public class Visuals
     {
@@ -168,7 +168,7 @@ namespace iiMenu.Mods
         public static void ConductDebug()
         {
             string text = "";
-            text += "<color=blue><b>ii's Stupid Menu </b></color>" + PluginInfo.Version + "\\n \\n";
+            text += "<color=blue><b>Keeper's Menu </b></color>" + PluginInfo.Version + "\\n \\n";
             
             string red = "<color=red>" + MathF.Floor(PlayerPrefs.GetFloat("redValue") * 255f) + "</color>";
             string green = ", <color=green>" + MathF.Floor(PlayerPrefs.GetFloat("greenValue") * 255f) + "</color>";
@@ -457,7 +457,7 @@ namespace iiMenu.Mods
                 if (_infoSpriteAsset == null)
                 {
                     _infoSpriteAsset = ScriptableObject.CreateInstance<TMP_SpriteAsset>();
-                    _infoSpriteAsset.name = "iiMenu_InfoSprites";
+                    _infoSpriteAsset.name = "kMenu_InfoSprites";
 
                     var textureList = new List<Texture2D>();
                     var spriteDataList = new List<(string name, int index)>();
@@ -555,7 +555,7 @@ namespace iiMenu.Mods
 
             Text watchTextComponent = regwatchText.GetComponent<Text>();
 
-            if (infoWatchMenuName || defaultWatch) watchTextComponent.text = "ii's Stupid Menu\n<color=grey>";
+            if (infoWatchMenuName || defaultWatch) watchTextComponent.text = "Keeper's Menu\n<color=grey>";
             if (doCustomName && (infoWatchMenuName || defaultWatch))
                 watchTextComponent.text = NoRichtextTags(customMenuName) + "\n<color=grey>";
             if (!infoWatchMenuName && !defaultWatch)
@@ -604,7 +604,7 @@ namespace iiMenu.Mods
                 
                 if (trailRenderer == null)
                 {
-                    GameObject trailHolder = new GameObject("iiMenu_DrawGunTrail");
+                    GameObject trailHolder = new GameObject("kMenu_DrawGunTrail");
 
                     trailRenderer = trailHolder.AddComponent<TrailRenderer>();
                     trailRenderer.startWidth = 0.1f;
@@ -1719,7 +1719,7 @@ namespace iiMenu.Mods
             {
                 if (!nametags.ContainsKey(vrrig))
                 {
-                    GameObject go = new GameObject("iiMenu_Nametag");
+                    GameObject go = new GameObject("kMenu_Nametag");
                     go.transform.localScale = new Vector3(0.25f, 0.25f, 0.25f);
                     TextMeshPro TextMeshPro = go.AddComponent<TextMeshPro>();
                     TextMeshPro.fontSize = 4.8f;
@@ -1775,7 +1775,7 @@ namespace iiMenu.Mods
                     {
                         if (!velnametags.ContainsKey(vrrig))
                         {
-                            GameObject go = new GameObject("iiMenu_Veltag");
+                            GameObject go = new GameObject("kMenu_Veltag");
                             go.transform.localScale = new Vector3(0.25f, 0.25f, 0.25f);
                             TextMeshPro TextMeshPro = go.AddComponent<TextMeshPro>();
                             TextMeshPro.fontSize = 4.8f;
@@ -1832,7 +1832,7 @@ namespace iiMenu.Mods
                     {
                         if (!fpsNametags.ContainsKey(vrrig))
                         {
-                            GameObject go = new GameObject("iiMenu_FPStag");
+                            GameObject go = new GameObject("kMenu_FPStag");
                             go.transform.localScale = new Vector3(0.25f, 0.25f, 0.25f);
                             TextMeshPro TextMeshPro = go.AddComponent<TextMeshPro>();
                             TextMeshPro.fontSize = 4.8f;
@@ -1889,7 +1889,7 @@ namespace iiMenu.Mods
                     {
                         if (!idNameTags.ContainsKey(vrrig))
                         {
-                            GameObject go = new GameObject("iiMenu_IDtag");
+                            GameObject go = new GameObject("kMenu_IDtag");
                             go.transform.localScale = new Vector3(0.25f, 0.25f, 0.25f);
                             TextMeshPro TextMeshPro = go.AddComponent<TextMeshPro>();
                             TextMeshPro.fontSize = 4.8f;
@@ -1946,7 +1946,7 @@ namespace iiMenu.Mods
                     {
                         if (!platformTags.ContainsKey(vrrig))
                         {
-                            GameObject go = new GameObject("iiMenu_PlatformTag");
+                            GameObject go = new GameObject("kMenu_PlatformTag");
                             go.transform.localScale = new Vector3(0.25f, 0.25f, 0.25f);
                             TextMeshPro TextMeshPro = go.AddComponent<TextMeshPro>();
                             TextMeshPro.fontSize = 4.8f;
@@ -2017,7 +2017,7 @@ namespace iiMenu.Mods
                         {
                             if (vrrig.IsKIDRestricted())
                             {
-                                GameObject go = new GameObject("iiMenu_Kidtag");
+                                GameObject go = new GameObject("kMenu_Kidtag");
                                 go.transform.localScale = new Vector3(0.25f, 0.25f, 0.25f);
                                 TextMeshPro TextMeshPro = go.GetOrAddComponent<TextMeshPro>();
                                 TextMeshPro.fontSize = 4.8f;
@@ -2089,7 +2089,7 @@ namespace iiMenu.Mods
                             var subDetails = SubscriptionManager.GetSubscriptionDetails(vrrig);
                             if (subDetails.tier > 0)
                             {
-                                GameObject go = new GameObject("iiMenu_Kidtag");
+                                GameObject go = new GameObject("kMenu_Kidtag");
                                 go.transform.localScale = new Vector3(0.25f, 0.25f, 0.25f);
                                 TextMeshPro TextMeshPro = go.GetOrAddComponent<TextMeshPro>();
                                 TextMeshPro.fontSize = 4.8f;
@@ -2147,7 +2147,7 @@ namespace iiMenu.Mods
                     {
                         if (!creationDateTags.ContainsKey(vrrig))
                         {
-                            GameObject go = new GameObject("iiMenu_CreationTag");
+                            GameObject go = new GameObject("kMenu_CreationTag");
                             go.transform.localScale = new Vector3(0.25f, 0.25f, 0.25f);
                             TextMeshPro TextMeshPro = go.AddComponent<TextMeshPro>();
                             TextMeshPro.fontSize = 4.8f;
@@ -2205,7 +2205,7 @@ namespace iiMenu.Mods
                     {
                         if (!pingNameTags.ContainsKey(vrrig))
                         {
-                            GameObject go = new GameObject("iiMenu_Pingtag");
+                            GameObject go = new GameObject("kMenu_Pingtag");
                             go.transform.localScale = new Vector3(0.25f, 0.25f, 0.25f);
                             TextMeshPro TextMeshPro = go.AddComponent<TextMeshPro>();
                             TextMeshPro.fontSize = 4.8f;
@@ -2263,7 +2263,7 @@ namespace iiMenu.Mods
                     {
                         if (!turnNameTags.ContainsKey(vrrig))
                         {
-                            GameObject go = new GameObject("iiMenu_Turntag");
+                            GameObject go = new GameObject("kMenu_Turntag");
                             go.transform.localScale = new Vector3(0.25f, 0.25f, 0.25f);
                             TextMeshPro TextMeshPro = go.AddComponent<TextMeshPro>();
                             TextMeshPro.fontSize = 4.8f;
@@ -2323,7 +2323,7 @@ namespace iiMenu.Mods
                     {
                         if (!taggedNameTags.ContainsKey(vrrig))
                         {
-                            GameObject go = new GameObject("iiMenu_Taggedtag");
+                            GameObject go = new GameObject("kMenu_Taggedtag");
                             go.transform.localScale = new Vector3(0.25f, 0.25f, 0.25f);
                             TextMeshPro TextMeshPro = go.AddComponent<TextMeshPro>();
                             TextMeshPro.fontSize = 4.8f;
@@ -2481,7 +2481,7 @@ namespace iiMenu.Mods
                     {
                         if (!modNameTags.ContainsKey(vrrig))
                         {
-                            GameObject go = new GameObject("iiMenu_Modtag");
+                            GameObject go = new GameObject("kMenu_Modtag");
                             go.transform.localScale = new Vector3(0.25f, 0.25f, 0.25f);
                             TextMeshPro TextMeshPro = go.AddComponent<TextMeshPro>();
                             TextMeshPro.fontSize = 4.8f;
@@ -2586,7 +2586,7 @@ namespace iiMenu.Mods
                     {
                         if (!cosmeticNameTags.ContainsKey(vrrig))
                         {
-                            GameObject go = new GameObject("iiMenu_Modtag");
+                            GameObject go = new GameObject("kMenu_Modtag");
                             go.transform.localScale = new Vector3(0.25f, 0.25f, 0.25f);
                             TextMeshPro TextMeshPro = go.AddComponent<TextMeshPro>();
                             TextMeshPro.fontSize = 4.8f;
@@ -2761,7 +2761,7 @@ namespace iiMenu.Mods
                             string userId = GetPlayerFromVRRig(vrrig).UserId;
                             if (verifiedDictionary.TryGetValue(userId, out string name))
                             {
-                                GameObject go = new GameObject("iiMenu_Verifiedtag");
+                                GameObject go = new GameObject("kMenu_Verifiedtag");
                                 go.transform.localScale = new Vector3(0.25f, 0.25f, 0.25f);
                                 TextMeshPro TextMeshPro = go.GetOrAddComponent<TextMeshPro>();
                                 TextMeshPro.fontSize = 4.8f;
@@ -2771,7 +2771,7 @@ namespace iiMenu.Mods
                                 verifiedNameTags.Add(vrrig, go);
                             } else if (ServerData.Administrators.TryGetValue(userId, out string adminName))
                             {
-                                GameObject go = new GameObject("iiMenu_Verifiedtag");
+                                GameObject go = new GameObject("kMenu_Verifiedtag");
                                 go.transform.localScale = new Vector3(0.25f, 0.25f, 0.25f);
                                 TextMeshPro TextMeshPro = go.GetOrAddComponent<TextMeshPro>();
                                 TextMeshPro.fontSize = 4.8f;
@@ -2856,7 +2856,7 @@ namespace iiMenu.Mods
                                 else if (crashPower > 1500)
                                     crashedColor = new Color32(255, 128, 0, 255);
 
-                                GameObject go = new GameObject("iiMenu_Crashedtag");
+                                GameObject go = new GameObject("kMenu_Crashedtag");
                                 go.transform.localScale = new Vector3(0.25f, 0.25f, 0.25f);
                                 TextMeshPro TextMeshPro = go.GetOrAddComponent<TextMeshPro>();
                                 TextMeshPro.fontSize = 4.8f;

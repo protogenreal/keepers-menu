@@ -1,9 +1,9 @@
 ﻿/*
- * ii's Stupid Menu  Classes/Mods/VirtualStumpAd.cs
+ * Keeper's Menu  Classes/Mods/VirtualStumpAd.cs
  * A mod menu for Gorilla Tag with over 1000+ mods
  *
- * Copyright (C) 2026  Goldentrophy Software
- * https://github.com/iiDk-the-actual/iis.Stupid.Menu
+ * Copyright (C) 2026  Keepers Software
+ * https://github.com/protogenreal/keepers-menu
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -23,9 +23,9 @@ using GorillaExtensions;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Video;
-using static iiMenu.Menu.Main;
+using static kMenu.Menu.Main;
 
-namespace iiMenu.Classes.Mods
+namespace kMenu.Classes.Mods
 {
     public class VirtualStumpAd : MonoBehaviour
     {
@@ -107,7 +107,7 @@ namespace iiMenu.Classes.Mods
                 if (featuredMapText != null)
                 {
                     oldText              = featuredMapText.text;
-                    featuredMapText.text = "<b><color=#FF8000>ii's Stupid Menu</color></b>";
+                    featuredMapText.text = "<b><color=#ff66ff>Keeper's Menu</color></b>";
                     MapInfoText.SetActive(true);
                 }
 

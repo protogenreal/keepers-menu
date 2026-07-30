@@ -1,4 +1,4 @@
-﻿namespace iiMenu.Managers.DiscordRPC.Message
+﻿namespace kMenu.Managers.DiscordRPC.Message
 {
 	/// <summary>
 	/// The connection to the discord client was succesfull. This is called before <see cref="MessageType.Ready"/>.

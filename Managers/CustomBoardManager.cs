@@ -1,9 +1,9 @@
 ﻿/*
- * ii's Stupid Menu  Managers/CustomBoardManager.cs
+ * Keeper's Menu  Managers/CustomBoardManager.cs
  * A mod menu for Gorilla Tag with over 1000+ mods
  *
- * Copyright (C) 2026  Goldentrophy Software
- * https://github.com/iiDk-the-actual/iis.Stupid.Menu
+ * Copyright (C) 2026  Keepers Software
+ * https://github.com/protogenreal/keepers-menu
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -20,16 +20,16 @@
  */
 
 using GorillaNetworking;
-using iiMenu.Extensions;
+using kMenu.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using static iiMenu.Menu.Main;
+using static kMenu.Menu.Main;
 
-namespace iiMenu.Managers
+namespace kMenu.Managers
 {
     public class CustomBoardManager : MonoBehaviour
     {

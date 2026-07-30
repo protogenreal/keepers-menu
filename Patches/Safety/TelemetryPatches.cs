@@ -1,9 +1,9 @@
 /*
- * ii's Stupid Menu  Patches/Safety/TelemetryPatches.cs
+ * Keeper's Menu  Patches/Safety/TelemetryPatches.cs
  * A mod menu for Gorilla Tag with over 1000+ mods
  *
- * Copyright (C) 2026  Goldentrophy Software
- * https://github.com/iiDk-the-actual/iis.Stupid.Menu
+ * Copyright (C) 2026  Keepers Software
+ * https://github.com/protogenreal/keepers-menu
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -24,7 +24,7 @@ using JetBrains.Annotations;
 using Liv.Lck.Telemetry;
 using PlayFab.EventsModels;
 
-namespace iiMenu.Patches.Safety
+namespace kMenu.Patches.Safety
 {
     // Gorilla Tag's one weakness -- tracking data to get players banned. This is how they did it over the years.
     public class TelemetryPatches

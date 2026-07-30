@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace iiMenu.Managers.DiscordRPC.Logging
+namespace kMenu.Managers.DiscordRPC.Logging
 {
 	public class DiscordLogManager : ILogger
 	{

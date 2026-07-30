@@ -1,9 +1,9 @@
 /*
- * ii's Stupid Menu  Managers/NotificationManager.cs
+ * Keeper's Menu  Managers/NotificationManager.cs
  * A mod menu for Gorilla Tag with over 1000+ mods
  *
- * Copyright (C) 2026  Goldentrophy Software
- * https://github.com/iiDk-the-actual/iis.Stupid.Menu
+ * Copyright (C) 2026  Keepers Software
+ * https://github.com/protogenreal/keepers-menu
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -20,10 +20,10 @@
  */
 
 using GorillaLocomotion;
-using iiMenu.Classes.Menu;
-using iiMenu.Extensions;
-using iiMenu.Menu;
-using iiMenu.Mods;
+using kMenu.Classes.Menu;
+using kMenu.Extensions;
+using kMenu.Menu;
+using kMenu.Mods;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -31,10 +31,10 @@ using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using static iiMenu.Menu.Main;
-using static iiMenu.Utilities.AssetUtilities;
+using static kMenu.Menu.Main;
+using static kMenu.Utilities.AssetUtilities;
 
-namespace iiMenu.Managers
+namespace kMenu.Managers
 {
     public class NotificationManager : MonoBehaviour
     {
@@ -74,7 +74,7 @@ namespace iiMenu.Managers
         {
             mainCamera = Camera.main.gameObject;
 
-            GameObject canvasParent = new GameObject("iiMenu_NotificationParent");
+            GameObject canvasParent = new GameObject("kMenu_NotificationParent");
             canvasParent.transform.position = mainCamera.transform.position;
 
             canvas = new GameObject("Canvas");

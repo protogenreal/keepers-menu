@@ -1,8 +1,8 @@
-﻿using iiMenu.Managers.DiscordRPC.Helper;
+﻿using kMenu.Managers.DiscordRPC.Helper;
 using System;
 using Valve.Newtonsoft.Json;
 
-namespace iiMenu.Managers.DiscordRPC
+namespace kMenu.Managers.DiscordRPC
 {
 	/// <summary>
 	/// Structure representing the part the player is in.

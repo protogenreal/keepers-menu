@@ -1,9 +1,9 @@
 /*
- * ii's Stupid Menu  Utilities/AssetUtilities.cs
+ * Keeper's Menu  Utilities/AssetUtilities.cs
  * A mod menu for Gorilla Tag with over 1000+ mods
  *
- * Copyright (C) 2026  Goldentrophy Software
- * https://github.com/iiDk-the-actual/iis.Stupid.Menu
+ * Copyright (C) 2026  Keepers Software
+ * https://github.com/protogenreal/keepers-menu
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -19,7 +19,7 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-using iiMenu.Managers;
+using kMenu.Managers;
 using System.Collections.Generic;
 using System.IO;
 using System.Net;
@@ -27,9 +27,9 @@ using System.Reflection;
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Networking;
-using static iiMenu.Utilities.FileUtilities;
+using static kMenu.Utilities.FileUtilities;
 
-namespace iiMenu.Utilities
+namespace kMenu.Utilities
 {
     public class AssetUtilities
     {

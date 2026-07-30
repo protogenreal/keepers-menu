@@ -1,9 +1,9 @@
 /*
- * ii's Stupid Menu  Patches/PatchHandler.cs
+ * Keeper's Menu  Patches/PatchHandler.cs
  * A mod menu for Gorilla Tag with over 1000+ mods
  *
- * Copyright (C) 2026  Goldentrophy Software
- * https://github.com/iiDk-the-actual/iis.Stupid.Menu
+ * Copyright (C) 2026  Keepers Software
+ * https://github.com/protogenreal/keepers-menu
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -20,12 +20,12 @@
  */
 
 using HarmonyLib;
-using iiMenu.Managers;
+using kMenu.Managers;
 using System;
 using System.Linq;
 using System.Reflection;
 
-namespace iiMenu.Patches
+namespace kMenu.Patches
 {
     public class PatchHandler
     {

@@ -1,9 +1,9 @@
 /*
- * ii's Stupid Menu  Mods/Fun.cs
+ * Keeper Menu  Mods/Fun.cs
  * A mod menu for Gorilla Tag with over 1000+ mods
  *
- * Copyright (C) 2026  Goldentrophy Software
- * https://github.com/iiDk-the-actual/iis.Stupid.Menu
+ * Copyright (C) 2026  Keepers Software
+ * https://github.com/protogenreal/keepers-menu
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -30,13 +30,13 @@ using GorillaTag.Cosmetics;
 using GorillaTag.Rendering;
 using GorillaTagScripts;
 using GorillaTagScripts.Builder;
-using iiMenu.Classes.Menu;
-using iiMenu.Classes.Mods;
-using iiMenu.Extensions;
-using iiMenu.Managers;
-using iiMenu.Menu;
-using iiMenu.Patches.Menu;
-using iiMenu.Utilities;
+using kMenu.Classes.Menu;
+using kMenu.Classes.Mods;
+using kMenu.Extensions;
+using kMenu.Managers;
+using kMenu.Menu;
+using kMenu.Patches.Menu;
+using kMenu.Utilities;
 using Ionic.Zlib;
 using Photon.Pun;
 using Photon.Realtime;
@@ -56,16 +56,16 @@ using System.Reflection;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Windows.Speech;
-using static iiMenu.Menu.Main;
-using static iiMenu.Utilities.AssetUtilities;
-using static iiMenu.Utilities.GameModeUtilities;
-using static iiMenu.Utilities.RandomUtilities;
-using static iiMenu.Utilities.RigUtilities;
+using static kMenu.Menu.Main;
+using static kMenu.Utilities.AssetUtilities;
+using static kMenu.Utilities.GameModeUtilities;
+using static kMenu.Utilities.RandomUtilities;
+using static kMenu.Utilities.RigUtilities;
 using Hashtable = ExitGames.Client.Photon.Hashtable;
 using Object = UnityEngine.Object;
 using Random = UnityEngine.Random;
 
-namespace iiMenu.Mods
+namespace kMenu.Mods
 {
     public static class Fun
     {
@@ -599,7 +599,7 @@ namespace iiMenu.Mods
         {
             if (FreeCamObject == null)
             {
-                FreeCamObject = new GameObject("iiMenu_CameraObj");
+                FreeCamObject = new GameObject("kMenu_CameraObj");
                 FreeCamObject.transform.position = GorillaTagger.Instance.headCollider.transform.position;
             }
 
@@ -624,7 +624,7 @@ namespace iiMenu.Mods
         {
             if (FreeCamObject == null)
             {
-                FreeCamObject = new GameObject("iiMenu_CameraObj");
+                FreeCamObject = new GameObject("kMenu_CameraObj");
                 FreeCamObject.transform.position = GorillaTagger.Instance.headCollider.transform.position;
             }
 
@@ -640,7 +640,7 @@ namespace iiMenu.Mods
         {
             if (FreeCamObject == null)
             {
-                FreeCamObject = new GameObject("iiMenu_CameraObj");
+                FreeCamObject = new GameObject("kMenu_CameraObj");
                 FreeCamObject.transform.position = GorillaTagger.Instance.headCollider.transform.position;
             }
 
@@ -656,7 +656,7 @@ namespace iiMenu.Mods
         {
             if (FreeCamObject == null)
             {
-                FreeCamObject = new GameObject("iiMenu_CameraObj");
+                FreeCamObject = new GameObject("kMenu_CameraObj");
                 FreeCamObject.transform.position = GorillaTagger.Instance.headCollider.transform.position;
             }
 
@@ -739,7 +739,7 @@ namespace iiMenu.Mods
                 {
                     if (FreeCamObject == null)
                     {
-                        FreeCamObject = new GameObject("iiMenu_CameraObj");
+                        FreeCamObject = new GameObject("kMenu_CameraObj");
                         FreeCamObject.transform.position = GorillaTagger.Instance.headCollider.transform.position;
                     }
 
@@ -1458,7 +1458,7 @@ namespace iiMenu.Mods
 
         private static VirtualStumpAd virtualStumpAd;
         public static void CustomVirtualStumpVideo() =>
-            virtualStumpAd ??= new GameObject("iiMenu_VirtualStumpAd").AddComponent<VirtualStumpAd>();
+            virtualStumpAd ??= new GameObject("kMenu_VirtualStumpAd").AddComponent<VirtualStumpAd>();
 
         public static void DisableCustomVirtualStumpVideo()
         {
@@ -3346,7 +3346,7 @@ Piece Name: {gunTarget.name}";
 
                     ThrowableBug targetBug = bugSpamToggle ? bug : firefly;
                     
-                    GameObject bugSpamObject = new GameObject("iiMenu_BugSpamObject");
+                    GameObject bugSpamObject = new GameObject("kMenu_BugSpamObject");
                     bugSpamObject.transform.localScale = Vector3.one * 0.2f;
                     bugSpamObject.layer = 3;
 
@@ -3390,7 +3390,7 @@ Piece Name: {gunTarget.name}";
 
                 LckSocialCamera camera = cameraSpamType ? LckSocialCameraManager.Instance._socialCameraCococamInstance : LckSocialCameraManager.Instance._socialCameraTabletInstance;
 
-                GameObject cameraSpamObject = new GameObject("iiMenu_CameraSpamObject");
+                GameObject cameraSpamObject = new GameObject("kMenu_CameraSpamObject");
                 cameraSpamObject.transform.localScale = Vector3.one * 0.2f;
                 cameraSpamObject.layer = 3;
 
@@ -3469,7 +3469,7 @@ Piece Name: {gunTarget.name}";
                     case 0:
                         {
                             ThrowableBug targetBug = bug;
-                            GameObject bugSpamObject = new GameObject("iiMenu_BugSpamObject");
+                            GameObject bugSpamObject = new GameObject("kMenu_BugSpamObject");
                             bugSpamObject.transform.localScale = Vector3.one * 0.2f;
                             bugSpamObject.layer = 3;
 
@@ -3503,7 +3503,7 @@ Piece Name: {gunTarget.name}";
                     case 1:
                         {
                             ThrowableBug targetBug = firefly;
-                            GameObject bugSpamObject = new GameObject("iiMenu_FireflySpamObject");
+                            GameObject bugSpamObject = new GameObject("kMenu_FireflySpamObject");
                             bugSpamObject.transform.localScale = Vector3.one * 0.2f;
                             bugSpamObject.layer = 3;
 
@@ -3541,7 +3541,7 @@ Piece Name: {gunTarget.name}";
 
                             LckSocialCamera camera = LckSocialCameraManager.Instance._socialCameraCococamInstance;
 
-                            GameObject cameraSpamObject = new GameObject("iiMenu_CameraSpamObject");
+                            GameObject cameraSpamObject = new GameObject("kMenu_CameraSpamObject");
                             cameraSpamObject.transform.localScale = Vector3.one * 0.2f;
                             cameraSpamObject.layer = 3;
 
@@ -3585,7 +3585,7 @@ Piece Name: {gunTarget.name}";
 
                             LckSocialCamera camera = LckSocialCameraManager.Instance._socialCameraTabletInstance;
 
-                            GameObject cameraSpamObject = new GameObject("iiMenu_CameraSpamObject");
+                            GameObject cameraSpamObject = new GameObject("kMenu_CameraSpamObject");
                             cameraSpamObject.transform.localScale = Vector3.one * 0.2f;
                             cameraSpamObject.layer = 3;
 
@@ -3874,7 +3874,7 @@ Piece Name: {gunTarget.name}";
 
                 if (inAir && !lastInAir)
                 {
-                    GameObject bugSpamObject = new GameObject("iiMenu_BugSpamObject");
+                    GameObject bugSpamObject = new GameObject("kMenu_BugSpamObject");
                     bugSpamObject.transform.localScale = Vector3.one * 0.2f;
                     bugSpamObject.layer = 3;
 
@@ -3954,7 +3954,7 @@ Piece Name: {gunTarget.name}";
                 {
                     grabbingCamera = false;
 
-                    GameObject bugSpamObject = new GameObject("iiMenu_BugSpamObject");
+                    GameObject bugSpamObject = new GameObject("kMenu_BugSpamObject");
                     bugSpamObject.transform.localScale = Vector3.one * 0.2f;
                     bugSpamObject.layer = 3;
 
@@ -5975,10 +5975,10 @@ Piece Name: {gunTarget.name}";
         public static string[] names = { };
         public static void EnableCustomNameCycle()
         {
-            if (File.Exists($"{PluginInfo.BaseDirectory}/iiMenu_CustomNameCycle.txt"))
-                names = File.ReadAllText($"{PluginInfo.BaseDirectory}/iiMenu_CustomNameCycle.txt").Split('\n');
+            if (File.Exists($"{PluginInfo.BaseDirectory}/kMenu_CustomNameCycle.txt"))
+                names = File.ReadAllText($"{PluginInfo.BaseDirectory}/kMenu_CustomNameCycle.txt").Split('\n');
             else
-                File.WriteAllText($"{PluginInfo.BaseDirectory}/iiMenu_CustomNameCycle.txt","YOUR\nTEXT\nHERE");
+                File.WriteAllText($"{PluginInfo.BaseDirectory}/kMenu_CustomNameCycle.txt","YOUR\nTEXT\nHERE");
         }
 
         public static string name;
@@ -7007,7 +7007,7 @@ Piece Name: {gunTarget.name}";
                 catch { LogManager.Log("Failed to log player"); }
             }
             text += "\n====================================\n";
-            text += "Text file generated with ii's Stupid Menu";
+            text += "Text file generated with Keeper's Menu";
             string fileName = $"{PluginInfo.BaseDirectory}/PlayerInfo/" + PhotonNetwork.CurrentRoom.Name + ".txt";
 
             File.WriteAllText(fileName, text);

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
-namespace iiMenu.Managers.DiscordRPC.IO
+namespace kMenu.Managers.DiscordRPC.IO
 {
 	/// <summary>
 	/// Provides the location of the Discord IPC pipes for the current operating system.

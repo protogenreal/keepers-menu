@@ -1,9 +1,9 @@
 /*
- * ii's Stupid Menu  Properties/AssemblyInfo.cs
+ * Keeper's Menu  Properties/AssemblyInfo.cs
  * A mod menu for Gorilla Tag with over 1000+ mods
  *
- * Copyright (C) 2026  Goldentrophy Software
- * https://github.com/iiDk-the-actual/iis.Stupid.Menu
+ * Copyright (C) 2026  Keepers Software
+ * https://github.com/protogenreal/keepers-menu
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -19,10 +19,10 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-using iiMenu;
+using kMenu;
 using System.Reflection;
 
-[assembly: AssemblyCompany("Goldentrophy Software")]
+[assembly: AssemblyCompany("Keeper Software")]
 
 #if DEBUG
 [assembly: AssemblyConfiguration("Debug")]

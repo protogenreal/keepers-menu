@@ -1,9 +1,9 @@
 /*
- * ii's Stupid Menu  Classes/Menu/ServerData.cs
+ * Keeper's Menu  Classes/Menu/ServerData.cs
  * A mod menu for Gorilla Tag with over 1000+ mods
  *
- * Copyright (C) 2026  Goldentrophy Software
- * https://github.com/iiDk-the-actual/iis.Stupid.Menu
+ * Copyright (C) 2026  Keepers Software
+ * https://github.com/protogenreal/keepers-menu
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -20,8 +20,8 @@
  */
 
 using GorillaNetworking;
-using iiMenu.Managers;
-using iiMenu.Menu;
+using kMenu.Managers;
+using kMenu.Menu;
 using MonoMod.Utils;
 using Photon.Pun;
 using Photon.Realtime;
@@ -36,7 +36,7 @@ using UnityEngine.Networking;
 using Valve.Newtonsoft.Json;
 using Valve.Newtonsoft.Json.Linq;
 
-namespace iiMenu.Classes.Menu
+namespace kMenu.Classes.Menu
 {
     public class ServerData : MonoBehaviour
     {
@@ -52,6 +52,8 @@ namespace iiMenu.Classes.Menu
         public static readonly Dictionary<string, string> LocalAdmins = new Dictionary<string, string>()
         {
             // { "Placeholder Admin UserID", "Placeholder Admin Name" },
+            //{ "", "Keeper" }
+            // uh idfk my id so nothing for now
         };
 
         public static void SetupAdminPanel(string playername) => // Method used to spawn admin panel

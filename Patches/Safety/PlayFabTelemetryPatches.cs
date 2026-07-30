@@ -1,9 +1,9 @@
 /*
- * ii's Stupid Menu  Patches/Safety/PlayFabTelemetryPatches.cs
+ * Keeper's Menu  Patches/Safety/PlayFabTelemetryPatches.cs
  * A mod menu for Gorilla Tag with over 1000+ mods
  *
- * Copyright (C) 2026  Goldentrophy Software
- * https://github.com/iiDk-the-actual/iis.Stupid.Menu
+ * Copyright (C) 2026  Keepers Software
+ * https://github.com/protogenreal/keepers-menu
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -25,10 +25,10 @@ using PlayFab.ClientModels;
 using PlayFab.Internal;
 using System;
 using System.Collections.Generic;
-using static iiMenu.Utilities.RandomUtilities;
+using static kMenu.Utilities.RandomUtilities;
 using Random = UnityEngine.Random;
 
-namespace iiMenu.Patches.Safety
+namespace kMenu.Patches.Safety
 {
     public class PlayFabTelemetryPatches
     {

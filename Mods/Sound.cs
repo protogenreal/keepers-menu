@@ -1,9 +1,9 @@
 ﻿/*
- * ii's Stupid Menu  Mods/Sound.cs
+ * Keeper Menu  Mods/Sound.cs
  * A mod menu for Gorilla Tag with over 1000+ mods
  *
- * Copyright (C) 2026  Goldentrophy Software
- * https://github.com/iiDk-the-actual/iis.Stupid.Menu
+ * Copyright (C) 2026  Keepers Software
+ * https://github.com/protogenreal/keepers-menu
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -21,11 +21,11 @@
 
 using ExitGames.Client.Photon;
 using GorillaLocomotion;
-using iiMenu.Classes.Menu;
-using iiMenu.Extensions;
-using iiMenu.Managers;
-using iiMenu.Menu;
-using iiMenu.Patches.Menu;
+using kMenu.Classes.Menu;
+using kMenu.Extensions;
+using kMenu.Managers;
+using kMenu.Menu;
+using kMenu.Patches.Menu;
 using Photon.Pun;
 using Photon.Realtime;
 using Photon.Voice.Unity;
@@ -35,12 +35,12 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using UnityEngine;
-using static iiMenu.Menu.Main;
-using static iiMenu.Utilities.AssetUtilities;
-using static iiMenu.Utilities.FileUtilities;
+using static kMenu.Menu.Main;
+using static kMenu.Utilities.AssetUtilities;
+using static kMenu.Utilities.FileUtilities;
 using Random = UnityEngine.Random;
 
-namespace iiMenu.Mods
+namespace kMenu.Mods
 {
     public static class Sound
     {

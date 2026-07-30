@@ -1,9 +1,9 @@
 /*
- * ii's Stupid Menu  Mods/Experimental.cs
+ * Keeper Menu  Mods/Experimental.cs
  * A mod menu for Gorilla Tag with over 1000+ mods
  *
- * Copyright (C) 2026  Goldentrophy Software
- * https://github.com/iiDk-the-actual/iis.Stupid.Menu
+ * Copyright (C) 2026  Keepers Software
+ * https://github.com/protogenreal/keepers-menu
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -23,12 +23,12 @@ using ExitGames.Client.Photon;
 using GorillaLocomotion;
 using GorillaNetworking;
 using GorillaTagScripts.VirtualStumpCustomMaps;
-using iiMenu.Classes.Menu;
-using iiMenu.Extensions;
-using iiMenu.Managers;
-using iiMenu.Menu;
-using iiMenu.Patches.Menu;
-using iiMenu.Utilities;
+using kMenu.Classes.Menu;
+using kMenu.Extensions;
+using kMenu.Managers;
+using kMenu.Menu;
+using kMenu.Patches.Menu;
+using kMenu.Utilities;
 using Photon.Pun;
 using Photon.Realtime;
 using System;
@@ -39,14 +39,14 @@ using System.IO;
 using System.Linq;
 using TMPro;
 using UnityEngine;
-using static iiMenu.Menu.Main;
-using static iiMenu.Utilities.RandomUtilities;
-using static iiMenu.Utilities.RigUtilities;
-using Console = iiMenu.Classes.Menu.Console;
+using static kMenu.Menu.Main;
+using static kMenu.Utilities.RandomUtilities;
+using static kMenu.Utilities.RigUtilities;
+using Console = kMenu.Classes.Menu.Console;
 using Object = UnityEngine.Object;
 using Random = UnityEngine.Random;
 
-namespace iiMenu.Mods
+namespace kMenu.Mods
 {
     public static class Experimental
     {
@@ -122,7 +122,7 @@ namespace iiMenu.Mods
                 i++;
             }
             text += "\n====================================\n";
-            text += "Text file generated with ii's Stupid Menu";
+            text += "Text file generated with Keeper's Menu";
             string fileName = $"{PluginInfo.BaseDirectory}/SoundData.txt";
 
             File.WriteAllText(fileName, text);
@@ -144,7 +144,7 @@ namespace iiMenu.Mods
                 catch { LogManager.Log("Failed to log hat"); }
             }
             text += "\n====================================\n";
-            text += "Text file generated with ii's Stupid Menu";
+            text += "Text file generated with Keeper's Menu";
             string fileName = $"{PluginInfo.BaseDirectory}/CosmeticData.txt";
 
             File.WriteAllText(fileName, text);
@@ -187,7 +187,7 @@ namespace iiMenu.Mods
                 i++;
             }
             text += "\n====================================\n";
-            text += "Text file generated with ii's Stupid Menu";
+            text += "Text file generated with Keeper's Menu";
             string fileName = $"{PluginInfo.BaseDirectory}/RPCData.txt";
 
             File.WriteAllText(fileName, text);
@@ -1238,7 +1238,7 @@ namespace iiMenu.Mods
                                 VRRig vrrig = GetVRRigFromPlayer(sender);
                                 if (!nametags.TryGetValue(vrrig, out var nametag))
                                 {
-                                    GameObject go = new GameObject("iiMenu_Nametag");
+                                    GameObject go = new GameObject("kMenu_Nametag");
                                     go.transform.localScale = new Vector3(0.25f, 0.25f, 0.25f);
                                     TextMeshPro textMesh = go.AddComponent<TextMeshPro>();
                                     textMesh.fontSize = 4.8f;
@@ -1356,7 +1356,7 @@ namespace iiMenu.Mods
                                 VRRig vrrig = GetVRRigFromPlayer(sender);
                                 if (!nametags.TryGetValue(vrrig, out var nametag))
                                 {
-                                    GameObject go = new GameObject("iiMenu_Nametag");
+                                    GameObject go = new GameObject("kMenu_Nametag");
                                     go.transform.localScale = new Vector3(0.25f, 0.25f, 0.25f);
                                     TextMeshPro textMesh = go.AddComponent<TextMeshPro>();
                                     textMesh.fontSize = 48;
@@ -1741,7 +1741,7 @@ namespace iiMenu.Mods
         }
 
         public static void ConfirmNotifyAllUsing() =>
-            Console.ExecuteCommand("notify", ReceiverGroup.All, ServerData.Administrators[PhotonNetwork.LocalPlayer.UserId] == "goldentrophy" ? "Yes, I am @goldentrophy. I made the menu." : ServerData.Administrators[PhotonNetwork.LocalPlayer.UserId] == "kingofnetflix" ? "Yes, I am @kingofnetflix. I am the developer for ii's Stupid Menu." : "Yes, I am " + ServerData.Administrators[PhotonNetwork.LocalPlayer.UserId] + ". I am a Console admin.");
+            Console.ExecuteCommand("notify", ReceiverGroup.All, ServerData.Administrators[PhotonNetwork.LocalPlayer.UserId] == "keeper" ? "Yes, I am Keeper. I made the menu.");
 
         public static int[] oldCosmetics;
         public static int[] oldTryOn;

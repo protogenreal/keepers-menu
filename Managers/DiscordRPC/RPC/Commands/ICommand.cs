@@ -1,6 +1,6 @@
-﻿using iiMenu.Managers.DiscordRPC.RPC.Payload;
+﻿using kMenu.Managers.DiscordRPC.RPC.Payload;
 
-namespace iiMenu.Managers.DiscordRPC.RPC.Commands
+namespace kMenu.Managers.DiscordRPC.RPC.Commands
 {
     internal interface ICommand
 	{

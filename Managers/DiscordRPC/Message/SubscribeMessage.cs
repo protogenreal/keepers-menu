@@ -1,6 +1,6 @@
-﻿using iiMenu.Managers.DiscordRPC.RPC.Payload;
+﻿using kMenu.Managers.DiscordRPC.RPC.Payload;
 
-namespace iiMenu.Managers.DiscordRPC.Message
+namespace kMenu.Managers.DiscordRPC.Message
 {
 	/// <summary>
 	/// Called as validation of a subscribe

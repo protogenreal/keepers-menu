@@ -1,9 +1,9 @@
 /*
- * ii's Stupid Menu  Mods/Settings.cs
+ * Keeper Menu  Mods/Settings.cs
  * A mod menu for Gorilla Tag with over 1000+ mods
  *
- * Copyright (C) 2026  Goldentrophy Software
- * https://github.com/iiDk-the-actual/iis.Stupid.Menu
+ * Copyright (C) 2026  Keepers Software
+ * https://github.com/protogenreal/keepers-menu
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -21,11 +21,11 @@
 
 using GorillaExtensions;
 using GorillaLocomotion;
-using iiMenu.Classes.Menu;
-using iiMenu.Extensions;
-using iiMenu.Managers;
-using iiMenu.Menu;
-using iiMenu.Utilities;
+using kMenu.Classes.Menu;
+using kMenu.Extensions;
+using kMenu.Managers;
+using kMenu.Menu;
+using kMenu.Utilities;
 using Photon.Pun;
 using Photon.Realtime;
 using System;
@@ -43,13 +43,13 @@ using UnityEngine.UI;
 using UnityEngine.Video;
 using UnityEngine.Windows.Speech;
 using UnityEngine.XR;
-using static iiMenu.Menu.Main;
-using static iiMenu.Utilities.AssetUtilities;
-using static iiMenu.Utilities.RigUtilities;
-using Console = iiMenu.Classes.Menu.Console;
+using static kMenu.Menu.Main;
+using static kMenu.Utilities.AssetUtilities;
+using static kMenu.Utilities.RigUtilities;
+using Console = kMenu.Classes.Menu.Console;
 using Object = UnityEngine.Object;
 
-namespace iiMenu.Mods
+namespace kMenu.Mods
 {
     public static class Settings
     {
@@ -241,7 +241,7 @@ namespace iiMenu.Mods
 
             if (TutorialSelector == null)
             {
-                TutorialSelector = new GameObject("iiMenu_TutorialSelector").AddComponent<LineRenderer>();
+                TutorialSelector = new GameObject("kMenu_TutorialSelector").AddComponent<LineRenderer>();
                 TutorialSelector.material.shader = Shader.Find("Sprites/Default");
 
                 TutorialSelector.startWidth = 0.01f;
@@ -311,7 +311,7 @@ namespace iiMenu.Mods
 
             string version = PluginInfo.Version;
             if (PluginInfo.BetaBuild) version = "<color=blue>Beta</color> " + version;
-            Buttons.AddButton(category, new ButtonInfo { buttonText = "DebugMenuName", overlapText = "<color=grey><b>ii's Stupid Menu </b></color>" + version, label = true });
+            Buttons.AddButton(category, new ButtonInfo { buttonText = "DebugMenuName", overlapText = "<color=grey><b>Keeper's Menu </b></color>" + version, label = true });
             Buttons.AddButton(category, new ButtonInfo { buttonText = "DebugColor", overlapText = "Loading...", label = true });
             Buttons.AddButton(category, new ButtonInfo { buttonText = "DebugName", overlapText = "Loading...", label = true });
             Buttons.AddButton(category, new ButtonInfo { buttonText = "DebugId", overlapText = "Loading...", label = true });
@@ -633,7 +633,7 @@ namespace iiMenu.Mods
 
         public static void SpectatePlayer(VRRig rig)
         {
-            GameObject cameraObject = new GameObject("iiMenu_SpectateCamera");
+            GameObject cameraObject = new GameObject("kMenu_SpectateCamera");
             RenderTexture renderTexture = new RenderTexture(512, 512, 16);
             cameraObject.AddComponent<Camera>().targetTexture = renderTexture;
             cameraObject.transform.SetParent(rig.headMesh.transform, false);
@@ -746,7 +746,7 @@ namespace iiMenu.Mods
 "))
                         logoLines += Environment.NewLine + @" ""    " + line + @" """;
                     string updateScript = @"@echo off
-title ii's Stupid Menu
+title Keeper's Menu
 color 0E
 
 cls
@@ -757,7 +757,7 @@ echo Your menu is updating, please wait...
 echo.
 
 set ""PLUGIN_PATH=BepInEx\plugins""
-dir ""%PLUGIN_PATH%\*iiMenu_AutoUpdater*.dll"" >nul 2>&1
+dir ""%PLUGIN_PATH%\*kMenu_AutoUpdater*.dll"" >nul 2>&1
 if %ERRORLEVEL%==0 (
     goto restart
 )
@@ -771,10 +771,10 @@ echo No menu file found, skipping update.
 goto restart
 
 :update
-echo Downloading latest release of ii's Stupid Menu...
+echo Downloading latest release of Keeper's Menu...
 
 curl -L -o ""%MENU_FILE%"" ^
-""https://github.com/iiDk-the-actual/iis.Stupid.Menu/releases/latest/download/iis_Stupid_Menu.dll""
+""https://github.com/protogenreal/keepers-menu/releases/latest/download/Keepers_Menu.dll""
 
 goto restart
 
@@ -816,7 +816,7 @@ echo
 PLUGIN_PATH=""BepInEx/plugins""
 MENU_FILE=""""
 
-if ls ""$PLUGIN_PATH""/*iiMenu_AutoUpdater*.dll 1> /dev/null 2>&1; then
+if ls ""$PLUGIN_PATH""/*kMenu_AutoUpdater*.dll 1> /dev/null 2>&1; then
     echo ""Auto-updater found. Restarting game...""
 else
     for f in ""$PLUGIN_PATH""/*stupid*menu*.dll; do
@@ -829,9 +829,9 @@ else
     if [ -z ""$MENU_FILE"" ]; then
         echo ""No menu file found, skipping update.""
     else
-        echo ""Downloading latest release of ii's Stupid Menu...""
+        echo ""Downloading latest release of Keeper's Menu...""
         curl -L -o ""$MENU_FILE"" \
-        ""https://github.com/iiDk-the-actual/iis.Stupid.Menu/releases/latest/download/iis_Stupid_Menu.dll""
+        ""https://github.com/protogenreal/keepers-menu/releases/latest/download/KeepersMenu.dll""
     fi
 fi
 
@@ -3817,7 +3817,7 @@ exit 0";
         private static int previousPage;
         public static void CustomMenuTheme()
         {
-            if (!File.Exists($"{PluginInfo.BaseDirectory}/iiMenu_CustomThemeColor.txt"))
+            if (!File.Exists($"{PluginInfo.BaseDirectory}/kMenu_CustomThemeColor.txt"))
                 WriteCustomTheme();
 
             ReadCustomTheme();
@@ -4043,7 +4043,7 @@ exit 0";
 
         public static void ReadCustomTheme()
         {
-            string[] linesplit = File.ReadAllText($"{PluginInfo.BaseDirectory}/iiMenu_CustomThemeColor.txt").Split("\n");
+            string[] linesplit = File.ReadAllText($"{PluginInfo.BaseDirectory}/kMenu_CustomThemeColor.txt").Split("\n");
 
             string[] a = linesplit[0].Split(",");
             backgroundColor.SetColor(0, new Color32(byte.Parse(a[0]), byte.Parse(a[1]), byte.Parse(a[2]), 255));
@@ -4070,7 +4070,7 @@ exit 0";
 
         public static void ImportCustomTheme(string theme)
         {
-            File.WriteAllText($"{PluginInfo.BaseDirectory}/iiMenu_CustomThemeColor.txt", theme);
+            File.WriteAllText($"{PluginInfo.BaseDirectory}/kMenu_CustomThemeColor.txt", theme);
             ReadCustomTheme();
         }
 
@@ -4101,7 +4101,7 @@ exit 0";
         }
 
         public static void WriteCustomTheme() =>
-            File.WriteAllText($"{PluginInfo.BaseDirectory}/iiMenu_CustomThemeColor.txt", ExportCustomTheme());
+            File.WriteAllText($"{PluginInfo.BaseDirectory}/kMenu_CustomThemeColor.txt", ExportCustomTheme());
 
         public static void FixTheme()
         {
@@ -4364,7 +4364,7 @@ exit 0";
             };
             string[] realinputcolor = {
                 "red",
-                "#ff8000",
+                "#ff66ff",
                 "yellow",
                 "green",
                 "blue",
@@ -4720,10 +4720,10 @@ exit 0";
         public static void CustomMenuName()
         {
             doCustomName = true;
-            if (!File.Exists($"{PluginInfo.BaseDirectory}/iiMenu_CustomMenuName.txt"))
-                File.WriteAllText($"{PluginInfo.BaseDirectory}/iiMenu_CustomMenuName.txt", "Your Text Here");
+            if (!File.Exists($"{PluginInfo.BaseDirectory}/kMenu_CustomMenuName.txt"))
+                File.WriteAllText($"{PluginInfo.BaseDirectory}/kMenu_CustomMenuName.txt", "Your Text Here");
             
-            customMenuName = File.ReadAllText($"{PluginInfo.BaseDirectory}/iiMenu_CustomMenuName.txt");
+            customMenuName = File.ReadAllText($"{PluginInfo.BaseDirectory}/kMenu_CustomMenuName.txt");
         }
 
         private static bool lastFocused;
@@ -4738,13 +4738,13 @@ exit 0";
         // Thanks to kingofnetflix for inspiration and support with voice recognition
         private static KeywordRecognizer mainPhrases;
         private static KeywordRecognizer modPhrases;
-        private static string[] keyWords = { "jarvis", "ii", "i i", "eye eye", "siri", "google", "alexa", "dummy", "computer", "stinky", "silly", "stupid", "console", "go go gadget", "monika", "wikipedia", "gideon", "a i", "ai", "a.i", "chat gpt", "chatgpt", "grok", "grock", "garmin" };
+        private static string[] keyWords = { "jarvis", "k", "siri", "google", "alexa", "dummy", "computer", "stinky", "silly", "stupid", "console", "go go gadget", "monika", "wikipedia", "gideon", "a i", "ai", "a.i", "chat gpt", "chatgpt", "grok", "grock", "garmin" };
         private static readonly string[] cancelKeywords = { "nevermind", "cancel", "never mind", "stop", "i hate you", "die" };
         public static void VoiceRecognitionOn()
         {
-            if (!File.Exists($"{PluginInfo.BaseDirectory}/iiMenu_Keywords.txt"))
-                File.WriteAllLines($"{PluginInfo.BaseDirectory}/iiMenu_Keywords.txt", keyWords);
-            keyWords = File.ReadAllLines($"{PluginInfo.BaseDirectory}/iiMenu_Keywords.txt");
+            if (!File.Exists($"{PluginInfo.BaseDirectory}/kMenu_Keywords.txt"))
+                File.WriteAllLines($"{PluginInfo.BaseDirectory}/kMenu_Keywords.txt", keyWords);
+            keyWords = File.ReadAllLines($"{PluginInfo.BaseDirectory}/kMenu_Keywords.txt");
             mainPhrases = new KeywordRecognizer(keyWords);
             mainPhrases.OnPhraseRecognized += ModRecognition;
             mainPhrases.Start();          
@@ -4901,9 +4901,9 @@ exit 0";
             else if (PhraseRecognitionSystem.Status != SpeechSystemStatus.Stopped)
                 PromptSingle("You can not use AI Assistant while you have another voice-related mod on.", () => mod.enabled = false, "Ok");
 
-            if (!File.Exists($"{PluginInfo.BaseDirectory}/iiMenu_Keywords.txt"))
-                File.WriteAllLines($"{PluginInfo.BaseDirectory}/iiMenu_Keywords.txt", keyWords);
-            keyWords = File.ReadAllLines($"{PluginInfo.BaseDirectory}/iiMenu_Keywords.txt");
+            if (!File.Exists($"{PluginInfo.BaseDirectory}/kMenu_Keywords.txt"))
+                File.WriteAllLines($"{PluginInfo.BaseDirectory}/kMenu_Keywords.txt", keyWords);
+            keyWords = File.ReadAllLines($"{PluginInfo.BaseDirectory}/kMenu_Keywords.txt");
 
             while (PhraseRecognitionSystem.Status != SpeechSystemStatus.Stopped)
                 yield return null;
@@ -5515,7 +5515,7 @@ exit 0";
 
                 if (clickGuiLine == null)
                 {
-                    clickGuiLine = new GameObject("iiMenu_ClickGUILine")
+                    clickGuiLine = new GameObject("kMenu_ClickGUILine")
                         .GetOrAddComponent<LineRenderer>();
 
                     clickGuiLine.material = new Material(Shader.Find("GUI/Text Shader"));
@@ -5662,7 +5662,7 @@ exit 0";
             if (canSelect)
             {
                 if (selectObject == null)
-                    selectObject = new GameObject("iiMenu_PingLine");
+                    selectObject = new GameObject("kMenu_PingLine");
 
                 Color targetColor = Buttons.GetIndex("Swap GUI Colors").enabled ? buttonColors[1].GetCurrentColor() : backgroundColor.GetCurrentColor();
                 Color lineColor = targetColor;
@@ -5835,14 +5835,14 @@ exit 0";
 
         public static void ResetVoiceCommandsKeywords()
         {
-            if (!File.Exists($"{PluginInfo.BaseDirectory}/iiMenu_Keywords.txt"))
-                File.WriteAllLines($"{PluginInfo.BaseDirectory}/iiMenu_Keywords.txt", keyWords);
+            if (!File.Exists($"{PluginInfo.BaseDirectory}/kMenu_Keywords.txt"))
+                File.WriteAllLines($"{PluginInfo.BaseDirectory}/kMenu_Keywords.txt", keyWords);
         }
 
         public static void ResetSystemPrompt()
         {
-            if (!File.Exists($"{PluginInfo.BaseDirectory}/iiMenu_SystemPrompt.txt"))
-                File.WriteAllText($"{PluginInfo.BaseDirectory}/iiMenu_SystemPrompt.txt", AIManager.SystemPrompt);
+            if (!File.Exists($"{PluginInfo.BaseDirectory}/kMenu_SystemPrompt.txt"))
+                File.WriteAllText($"{PluginInfo.BaseDirectory}/kMenu_SystemPrompt.txt", AIManager.SystemPrompt);
         }
 
         public static string SavePreferencesToText()
@@ -5995,7 +5995,7 @@ exit 0";
         }
 
         public static void SavePreferences() =>
-            File.WriteAllText($"{PluginInfo.BaseDirectory}/iiMenu_Preferences.txt", SavePreferencesToText());
+            File.WriteAllText($"{PluginInfo.BaseDirectory}/kMenu_Preferences.txt", SavePreferencesToText());
 
         public static int loadingPreferencesFrame;
         public static void LoadPreferencesFromText(string text)
@@ -6295,13 +6295,13 @@ exit 0";
         {
             try
             {
-                if (!File.Exists($"{PluginInfo.BaseDirectory}/iiMenu_Preferences.txt"))
+                if (!File.Exists($"{PluginInfo.BaseDirectory}/kMenu_Preferences.txt"))
                 {
                     hasLoadedPreferences = true;
                     return;
                 }
 
-                string text = File.ReadAllText($"{PluginInfo.BaseDirectory}/iiMenu_Preferences.txt");
+                string text = File.ReadAllText($"{PluginInfo.BaseDirectory}/kMenu_Preferences.txt");
                 LoadPreferencesFromText(text);
             } catch (Exception e) { LogManager.Log("Error loading preferences: " + e.Message); }
         }
@@ -6350,7 +6350,7 @@ exit 0";
 
         public static void LoadPCControls()
         {
-            string fileName = $"{PluginInfo.BaseDirectory}/iiMenu_PCControls.txt";
+            string fileName = $"{PluginInfo.BaseDirectory}/kMenu_PCControls.txt";
 
             if (File.Exists(fileName))
             {

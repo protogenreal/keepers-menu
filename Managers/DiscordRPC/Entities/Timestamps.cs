@@ -1,7 +1,7 @@
 ﻿using System;
 using Valve.Newtonsoft.Json;
 
-namespace iiMenu.Managers.DiscordRPC
+namespace kMenu.Managers.DiscordRPC
 {
 	/// <summary>
 	/// Structure representing the start and endtimes of a match.

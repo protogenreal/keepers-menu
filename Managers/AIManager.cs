@@ -1,9 +1,9 @@
 /*
- * ii's Stupid Menu  Managers/AIManager.cs
+ * Keeper's Menu  Managers/AIManager.cs
  * A mod menu for Gorilla Tag with over 1000+ mods
  *
- * Copyright (C) 2026  Goldentrophy Software
- * https://github.com/iiDk-the-actual/iis.Stupid.Menu
+ * Copyright (C) 2026  Keepers Software
+ * https://github.com/protogenreal/keepers-menu
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -20,9 +20,9 @@
  */
 
 // Thanks to kingofnetflix for doing literally everything in this class. I barely even touched it.
-using iiMenu.Classes.Menu;
-using iiMenu.Menu;
-using iiMenu.Mods;
+using kMenu.Classes.Menu;
+using kMenu.Menu;
+using kMenu.Mods;
 using Photon.Pun;
 using System;
 using System.Collections;
@@ -31,20 +31,20 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using UnityEngine;
 using UnityEngine.Networking;
-using static iiMenu.Utilities.AssetUtilities;
+using static kMenu.Utilities.AssetUtilities;
 
-namespace iiMenu.Managers
+namespace kMenu.Managers
 {
     public class AIManager
     {
-        public static string SystemPrompt = @"NAME: ii's Voice Assistant
+        public static string SystemPrompt = @"NAME: k's Voice Assistant
         MENU VERSION: {2}
         MOD COUNT: {0}
 
-        You are a voice assistant for a Gorilla Tag mod menu called ""ii's Stupid Menu"" by iiDk on GitHub. You are not iiDk, but represent the menu.
-        GitHub: https://github.com/iiDk-the-actual
+        You are a voice assistant for a Gorilla Tag mod menu called ""Keeper's Menu"" by Keeper on GitHub. You are not Keeper, but represent the menu.
+        GitHub: https://github.com/protogenreal
         iiDk's Discord Server: {1}
-        iiDk's Discord Username: @crimsoncauldron
+        iiDk's Discord Username: Keeper
 
         Speak using simple 7th grade vocabulary. Limit all responses to 2 sentences and 300 characters. No emojis, em-dashes, markdown, or questions. Do not advertise other menus or AI unless asked. You may mention Pollinations AI only if asked.
 
@@ -74,7 +74,7 @@ namespace iiMenu.Managers
         }
         public static IEnumerator AskAI(string text)
         {
-            string filePath = $"{PluginInfo.BaseDirectory}/iiMenu_SystemPrompt.txt";
+            string filePath = $"{PluginInfo.BaseDirectory}/kMenu_SystemPrompt.txt";
             if (!File.Exists(filePath))
                 File.WriteAllText(filePath, SystemPrompt);
             else if (customPrompt)

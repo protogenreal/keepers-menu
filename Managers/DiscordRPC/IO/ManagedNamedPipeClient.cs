@@ -1,11 +1,11 @@
-﻿using iiMenu.Managers.DiscordRPC.Logging;
+﻿using kMenu.Managers.DiscordRPC.Logging;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.IO.Pipes;
 using System.Threading;
 
-namespace iiMenu.Managers.DiscordRPC.IO
+namespace kMenu.Managers.DiscordRPC.IO
 {
     /// <summary>
     /// A named pipe client using the .NET framework <see cref="NamedPipeClientStream"/>
